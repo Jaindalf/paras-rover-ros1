@@ -1,0 +1,8 @@
+<launch>
+
+  <node pkg="master_node"
+        type="master_node.py"
+        name="master"
+        output="screen"/>
+
+</launch>

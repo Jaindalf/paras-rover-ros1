@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="serial_control" type="control_node.py" name="serial_control" output="screen"/>
+
+  <node pkg="rover_hardware" type="motor_bridge.py" name="motor_bridge" output="screen"/>
+
+  <node pkg="wheel_odometry" type="odom_node.py" name="wheel_odometry" output="screen"/>
+
+  <node pkg="master_node" type="master_node.py" name="master_node" output="screen"/>
+
+  <node pkg="rplidar_ros" type="rplidarNode" name="rplidar" output="screen">
+      <param name="serial_port" value="/dev/ttyLidar"/>
+  </node>
+
+</launch>

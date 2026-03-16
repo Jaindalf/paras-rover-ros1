@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="six_wheel_rover">
+
+  <!-- ================= BASE ================= -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.6 0.4 0.15"/>
+      </geometry>
+      <origin xyz="0 0 0.075" rpy="0 0 0"/>
+      <material name="gray">
+        <color rgba="0.6 0.6 0.6 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- ================= LIDAR ================= -->
+  <link name="laser"/>
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser"/>
+    <!-- adjust height if needed -->
+    <origin xyz="0.0 0.0 0.20" rpy="0 0 0"/>
+  </joint>
+
+</robot>
